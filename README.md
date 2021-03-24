@@ -3,7 +3,9 @@ This repo show the code to blink LED without OS.
 
 ## dev environment
 host: macOS Big Sur 11.2.2
+
 compiler: clang version 11.1.0
+
 linker: LLD 11.1.0 (compatible with GNU linkers)
 
 I used llvm to compile the program. If you want to use gnu compiler, edit Makefile.
