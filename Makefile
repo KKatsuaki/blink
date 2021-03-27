@@ -12,7 +12,6 @@ LINK         =link.ld
 SRCS         =$(wildcard $(SRCDIR)/*.c)
 OBJS         =$(SRCS:src/%.c=tmp/%.o)
 DUMP         =$(PROJECT).dump
-SD_CARD      = #/path/to/mounted sd-card
 ########################################################
 
 ##--OPTIONS and FLAGS--#################################
@@ -20,10 +19,6 @@ CFLAGS   = -Wall -O2 -ffreestanding -nostdinc -nostdlib -mcpu=cortex-a72+nosimd 
 LD       = ld.lld
 OBJCOPY  = llvm-objcopy
 OBJDUMP  = llvm-objdump
-########################################################
-
-##--comands depend on dev system--######################
-EJECT = diskutil eject #command to eject sd card (default: for macOS)
 ########################################################
 
 all: dump
@@ -51,7 +46,3 @@ $(DUMP): $(ELF)
 	@rm -rf $(DUMP)
 	@echo `date` > $(DUMP)
 	@$(OBJDUMP) -d $(ELF) | tee -a $(PROJECT).dump | less
-
-cp: $(IMG)
-	cp $(IMG) $(SD_CARD)/$(IMG)
-	$(EJECT) $(SD_CARD)
