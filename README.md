@@ -1,7 +1,7 @@
 # blink raspbery pi 4 baremetal
 This repo show the code to blink LED without OS.
 
-## dev environment
+## environment
 host: macOS Big Sur 11.2.2
 
 compiler: clang version 11.1.0
