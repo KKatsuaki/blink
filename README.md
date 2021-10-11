@@ -13,4 +13,4 @@ I used llvm to compile the program. If you want to use gnu compiler, edit Makefi
 ## build
 just run `make build` to build the program.
 
-the datasheet for BCM2711 (peripherals) is [here](https://datasheets.raspberrypi.org/bcm2711/bcm2711-peripherals.pdf).
+the datasheet for BCM2711 is [here](https://datasheets.raspberrypi.org/bcm2711/bcm2711-peripherals.pdf).
