@@ -1,4 +1,4 @@
-# blink raspbery pi 4 baremetal
+# blink raspbery pi 4 (baremetal)
 This repo show the code to blink LED without OS.
 
 ## environment
